@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bank Account</title>
+</head>
+<body>
+  <h1>Bank Account</h1>
+  <div class="row">
+    <div class="col-lg-6">
+      <form id="registerAccount">
+        <div class="form-group">
+          <label>Name: </label>
+          <input type="text" id="accountName"placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Initial Deposit: </label>
+          <input type="text" id="initialDeposit"placeholder="$600">
+        </div>
+        <button type="submit" class="btn btn-md btn-primary">Register</button>
+      </form>
+    </div>
+
+  <div class="col-lg-6">
+    <form id="accountFunds">
+      <div class="form-group">
+        <label>Deposit Amount: </label>
+        <input type="text" id="">
+      </div>
+      <div class="form-group">
+        <label>Withdrawal Amount: </label>
+        <input type="text">
+      </div>
+      <button id="depositFunds" class="btn btn-md btn-primary">Deposit</button>
+      <button id="withdrawFunds" class="btn btn-md btn-primary">Withdraw</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <div class="displayBalance">
+    <h4>Account Balance: </h4>
+    <p id="balance">$4500</p>
+  </div>
+
+</body>
+
+</html>
