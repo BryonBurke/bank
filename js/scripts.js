@@ -4,13 +4,14 @@ function Account(name, balance){
 }
 
 
-// Account.prototype.deposit = function(amount){
-//
-// }
+Account.prototype.deposit = function(amount){
+  return this.balance += amount;
+  console.log(balance);
+}
 
 $(document).ready(function () {
   $('#depositBtn').click(function(){
-    console.log('Deposit clicked!');
+    // account.deposit();
   });
   $('#withdrawBtntBtn').click(function(){
     console.log('Withdraw clicked!');
@@ -22,13 +23,13 @@ $(document).ready(function () {
         $('#registerAccount').hide();
         $('#accountFunds').show();
         $('.displayBalance').show();
-        let depositAmt = parseInt($('#depositAmt').val())
-        let withdrawalAmt = parseInt($('#withdrawalAmt').val())
+        let depositAmt = parseInt($('#depositAmt').val());
+        let withdrawalAmt = parseInt($('#withdrawalAmt').val());
 
         var account = new Account(accountName, initialDeposit);
 
         console.log(account);
-        // account.deposit(500);
+        // account.deposit(depositAmt);
 
     })
 });
