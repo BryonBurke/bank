@@ -4,12 +4,17 @@ function Account(name, balance){
 }
 
 
-Account.prototype.deposit = function(){
-
-}
-
+// Account.prototype.deposit = function(amount){
+//
+// }
 
 $(document).ready(function () {
+  $('#depositBtn').click(function(){
+    console.log('Deposit clicked!');
+  });
+  $('#withdrawBtntBtn').click(function(){
+    console.log('Withdraw clicked!');
+  });
     $('#registerAccount').submit(function (event) {
         event.preventDefault();
         let accountName = $('#accountName').val();
@@ -17,12 +22,13 @@ $(document).ready(function () {
         $('#registerAccount').hide();
         $('#accountFunds').show();
         $('.displayBalance').show();
-        let depositAmt = $('#funds')
+        let depositAmt = parseInt($('#depositAmt').val())
+        let withdrawalAmt = parseInt($('#withdrawalAmt').val())
 
         var account = new Account(accountName, initialDeposit);
 
         console.log(account);
-
+        // account.deposit(500);
 
     })
 });
